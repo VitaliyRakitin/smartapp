@@ -1,10 +1,11 @@
-name: brain
+name: SmartApp
 
 entryPoint:
-  - main.sc
+  - entryPoint.sc
 
 botEngine: v2
 language: ru
+
 sts:
   noMatchThreshold: 0.2
 caila:
