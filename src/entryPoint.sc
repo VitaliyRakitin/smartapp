@@ -7,11 +7,11 @@ require: js/getters.js
 # Подключение сценарных файлов
 require: main.sc
 
+pattern:
+    $AnyText = $regexp<.*>
+    
+    
 theme: /
-
-    pattern:
-        $AnyText = $regexp<.*>
-
     state: Start
         # При запуске приложения с кнопки прилетит сообщение /start.
         q!: $regex</start>
