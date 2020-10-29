@@ -9,16 +9,19 @@ function reply(body, response){
 
 
 function addAction(action, context){
-    var body = {
-        items: [
-            {
-                command: {
-                    type: "smart_app_data",
-                    action: action
-                }
-            }
-        ]
-    }; 
-
-    return reply(body, context.response);
+    var command = {
+        type: "smart_app_data",
+        action: action
+    };
+    
+    if (context.response.replies &&
+        context.response.replies.length &&
+        context.response.replies[0].body &&
+        context.response.replies[0].body.items
+    ) {
+        context.response.replies.body.items.push({command: command});
+        return;
+    };
+    
+    return reply({items: [{command: command}]}, context.response);
 }
