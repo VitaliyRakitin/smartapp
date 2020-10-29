@@ -2,9 +2,11 @@ function reply(body, response){
     var reply_data = {
         type: "raw",
         body: body
-    };
+    };    
+    log('reply_data')
+    log(reply_data);
+
     response.replies = response.replies || [];
-    log(reply_data)
     response.replies.push(reply_data);
 }
 
