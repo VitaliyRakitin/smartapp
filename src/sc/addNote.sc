@@ -7,4 +7,3 @@ theme: /
 
         script:
             addNote($parseTree._anyText, $context);
-            addNote($parseTree._anyText + "1", $context);
