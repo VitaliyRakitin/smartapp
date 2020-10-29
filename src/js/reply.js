@@ -25,3 +25,22 @@ function addAction(action, context){
     
     return reply({items: [{command: command}]}, context.response);
 }
+
+
+function addSuggestions(suggestions, context) {
+    var buttons = [];
+
+    suggestions.forEach (function(suggest) {
+        buttons.push(
+            {
+                action: {
+                    text: suggest,
+                    type: "text"
+                },
+                title: suggest
+            }
+        );
+    });
+    
+    reply({suggestions: {buttons: buttons}}, context);
+}

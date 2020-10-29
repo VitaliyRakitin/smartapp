@@ -11,3 +11,4 @@ theme: /
             
         script:
             addNote($parseTree._anyText, $context);
+            addSuggestions(["Добавь задачу купить машину"], $context);
