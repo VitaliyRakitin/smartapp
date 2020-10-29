@@ -8,7 +8,7 @@ require: js/getters.js
 require: main.sc
 
 patterns:
-    $AnyText: $nonEmptyGarbage
+    $AnyText: $regexp<.*>
 
 theme: /
     state: Start
