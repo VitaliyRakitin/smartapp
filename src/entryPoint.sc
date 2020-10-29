@@ -9,6 +9,7 @@ require: js/actions.js
 # Подключение сценарных файлов
 require: main.sc
 
+
 patterns:
     $AnyText = $nonEmptyGarbage
 
@@ -19,13 +20,6 @@ theme: /
         # При запуске приложения с голоса прилетит сказанная фраза.
         q!: (запусти | открой | вруби) моё приложение
         a: Начнём.
-    
-    state: ДобавлениеЭлемента
-        q!: (~добавить|~установить|запиши|поставь|закинь) 
-            [~напоминание|~заметка|~задание|~задача]
-            $AnyText::anyText
-        script:
-            addNote(anyText);
 
     state: Fallback
         event!: noMatch
