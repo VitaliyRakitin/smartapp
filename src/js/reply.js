@@ -1,11 +1,11 @@
 function reply(body, response){
-    var reply = {
+    var reply_data = {
         type: "raw",
         body: body
     };
     response.replies = response.replies || [];
-    log(reply)
-    response.replies.push(reply);
+    log(reply_data)
+    response.replies.push(reply_data);
 }
 
 
