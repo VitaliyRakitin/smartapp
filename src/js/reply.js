@@ -29,7 +29,7 @@ function addAction(action, context){
 
 function addSuggestions(suggestions, context) {
     var buttons = [];
-
+    
     suggestions.forEach (function(suggest) {
         buttons.push(
             {
@@ -41,6 +41,14 @@ function addSuggestions(suggestions, context) {
             }
         );
     });
+
+    if (context.response.replies &&
+        context.response.replies.length &&
+        context.response.replies[0].body
+    ) {
+        context.response.replies[0].body.suggestions = {buttons: buttons};
+        return;
+    }
     
     reply({suggestions: {buttons: buttons}}, context);
 }
