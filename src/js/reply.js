@@ -46,7 +46,7 @@ function addSuggestions(suggestions, context) {
 
     for (var index = 0; context.response.replies && index < context.response.replies.length; index ++) {
         if (context.response.replies[index].type === "raw" &&
-            context.response.replies[index].body)
+            context.response.replies[index].body
         ) {
             log("IN")
             context.response.replies[index].body.items.push({command: command});
