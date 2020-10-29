@@ -13,7 +13,7 @@ function addAction(action, context){
         type: "smart_app_data",
         action: action
     };
-    for (int index = 0; context.response.replies && index < context.response.replies.length; index ++) {
+    for (var index = 0; context.response.replies && index < context.response.replies.length; index ++) {
         if (context.response.replies[index].type === "raw" &&
             context.response.replies[index].body &&
             context.response.replies[index].body.items
