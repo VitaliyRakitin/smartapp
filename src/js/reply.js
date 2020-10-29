@@ -1,14 +1,10 @@
 function reply(body, response){
-    var reply_data = {
+    var replyData = {
         type: "raw",
         body: body
     };    
-    log('reply_data')
-    log(reply_data);
-
     response.replies = response.replies || [];
-    response.replies.push(reply_data);
-    log(response.replies);
+    response.replies.push(replyData);
 }
 
 
@@ -46,18 +42,15 @@ function addSuggestions(suggestions, context) {
         );
     });
     
-    log(buttons);
-
-    for (var index = 0; context.response.replies && index < context.response.replies.length; index ++) {
-        if (context.response.replies[index].type === "raw" &&
-            context.response.replies[index].body
-        ) {
-            log("IN")
-            context.response.replies[index].body.suggestions = {buttons: buttons};
-            return;
-        }
-    }
+    // for (var index = 0; context.response.replies && index < context.response.replies.length; index ++) {
+    //     if (context.response.replies[index].type === "raw" &&
+    //         context.response.replies[index].body
+    //     ) {
+    //         log("IN")
+    //         context.response.replies[index].body.suggestions = {buttons: buttons};
+    //         return;
+    //     }
+    // }
 
     reply({"suggestions": {"buttons": buttons}}, context.response);
-    log(context.response.replies);
 }
