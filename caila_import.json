@@ -13,21 +13,17 @@
   },
   "intents" : [ {
     "id" : 39071,
-    "path" : "/пока",
+    "path" : "/ДобавлениеЗаписи",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "пока"
-    }, {
-      "text" : "прощай "
-    }, {
-      "text" : "хочу @Ингредиент"
+      "text" : "Добавь .*"
     } ],
     "patterns" : [ ],
     "slots" : [ {
-      "name" : "ing",
-      "entity" : "Ингредиент",
-      "required" : false,
+      "name" : "anyText",
+      "entity" : "ЛюбаяСтрока",
+      "required" : true,
       "prompts" : [ ]
     } ]
   }, {
@@ -49,7 +45,7 @@
   "entities" : [ {
     "entity" : {
       "id" : 21591,
-      "name" : "Ингредиент",
+      "name" : "ЛюбаяСтрока",
       "enabled" : true,
       "shared" : false,
       "type" : "annotation",
@@ -58,14 +54,9 @@
       "noMorph" : false
     },
     "records" : [ {
-      "id" : 534303,
-      "type" : "synonyms",
-      "rule" : [ "картошка", "картоха" ],
-      "value" : "{\"id\":\"картоха\"}"
-    }, {
-      "id" : 534346,
+      "id" : 534565,
       "type" : "pattern",
-      "rule" : [ ],
+      "rule" : [ "$regexp<.*>" ],
       "value" : ""
     } ]
   } ],

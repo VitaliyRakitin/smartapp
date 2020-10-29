@@ -7,6 +7,8 @@ require: js/getters.js
 # Подключение сценарных файлов
 require: main.sc
 
+pattern:
+    $AnyText = $regexp<.*>
 
 theme: /
     state: Start
@@ -15,7 +17,10 @@ theme: /
         # При запуске приложения с голоса прилетит сказанная фраза.
         q!: (запусти | открой | вруби) моё приложение
         a: Начнём.
-        
+    
+    state: ДобавлениеЭлемента
+        q!: (добавь) $AnyText::anyText
+        a: {{ $parseTree }}
 
     state: Fallback
         event!: noMatch
