@@ -52,6 +52,6 @@ function addSuggestions(suggestions, context) {
         return;
     }
     
-        log("reply")
+        log(context.response.replies)
     reply({suggestions: {buttons: buttons}}, context);
 }
