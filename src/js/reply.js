@@ -16,7 +16,7 @@ function addAction(action, context){
                 command: {
                     type: "smart_app_data",
                     action: action
-                };
+                }
             }
         ]
     }; 
