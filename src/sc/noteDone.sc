@@ -4,10 +4,11 @@ theme: /
         event!: done
         event!: DONE
         
+        script:
+            addSuggestions(["Добавь задачу купить машину"], $context);
+            
         random: 
             a: Молодец!
             a: Красавичк!
             a: Супер!
         
-        script:
-            addSuggestions(["Добавь задачу купить машину"], $context);
