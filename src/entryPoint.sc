@@ -8,6 +8,7 @@ require: js/actions.js
 
 # Подключение сценарных файлов
 require: main.sc
+require: addNode.sc
 
 
 patterns:
