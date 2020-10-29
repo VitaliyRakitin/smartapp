@@ -13,15 +13,15 @@ function addAction(action, context){
         type: "smart_app_data",
         action: action
     };
-    
-    if (context.response.replies &&
-        context.response.replies.length &&
-        context.response.replies[0].body &&
-        context.response.replies[0].body.items
-    ) {
-        context.response.replies[0].body.items.push({command: command});
-        return;
-    };
+    for (int index = 0; context.response.replies && index < context.response.replies.length; index ++) {
+        if (context.response.replies[index].type === "raw" &&
+            context.response.replies[index].body &&
+            context.response.replies[index].body.items
+        ) {
+            context.response.replies[index].body.items.push({command: command});
+            return;
+        }
+    }
     
     return reply({items: [{command: command}]}, context.response);
 }
@@ -41,17 +41,18 @@ function addSuggestions(suggestions, context) {
             }
         );
     });
+    
     log(buttons);
 
-    if (context.response.replies &&
-        context.response.replies.length &&
-        context.response.replies[0].body
-    ) {
-        log("IN");
-        context.response.replies[0].body.suggestions = {buttons: buttons};
-        return;
+    for (int index = 0; context.response.replies && index < context.response.replies.length; index ++) {
+        if (context.response.replies[index].type === "raw" &&
+            context.response.replies[index].body)
+        ) {
+            context.response.replies[index].body.items.push({command: command});
+            return;
+        }
     }
-    
+
     reply({suggestions: {buttons: buttons}}, context);
     log(context.response.replies);
 }
