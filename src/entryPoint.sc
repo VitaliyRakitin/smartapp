@@ -7,8 +7,8 @@ require: js/reply.js
 require: js/actions.js
 
 # Подключение сценарных файлов
-require: main.sc
-require: addNote.sc
+require: sc/addNote.sc
+require: sc/noteDone.sc
 
 
 patterns:

@@ -11,54 +11,7 @@
     "timezone" : "UTC",
     "shared" : false
   },
-  "intents" : [ {
-    "id" : 39071,
-    "path" : "/ДобавлениеЗаписи",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "Добавь .*"
-    } ],
-    "patterns" : [ ],
-    "slots" : [ {
-      "name" : "anyText",
-      "entity" : "ЛюбаяСтрока",
-      "required" : true,
-      "prompts" : [ ]
-    } ]
-  }, {
-    "id" : 39072,
-    "path" : "/привет",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "привет"
-    } ],
-    "patterns" : [ ],
-    "slots" : [ {
-      "name" : "ing",
-      "entity" : "Ингредиент",
-      "required" : true,
-      "prompts" : [ ]
-    } ]
-  } ],
-  "entities" : [ {
-    "entity" : {
-      "id" : 21591,
-      "name" : "ЛюбаяСтрока",
-      "enabled" : true,
-      "shared" : false,
-      "type" : "annotation",
-      "priority" : 1,
-      "noSpelling" : false,
-      "noMorph" : false
-    },
-    "records" : [ {
-      "id" : 534565,
-      "type" : "pattern",
-      "rule" : [ "$regexp<.*>" ],
-      "value" : ""
-    } ]
-  } ],
+  "intents" : [ ],
+  "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
 }
