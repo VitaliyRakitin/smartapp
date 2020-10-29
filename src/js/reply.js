@@ -11,14 +11,15 @@ function reply(body, response){
 
 function addAction(action, context){
     var body = {
-        "items": [
+        items: [
             {
-                "command": {
-                    "type": "smart_app_data",
-                    "action": action
-                }
+                command: {
+                    type: "smart_app_data",
+                    action: action
+                };
             }
         ]
     }; 
+
     return reply(context.response);
 }

@@ -1,6 +1,6 @@
 function addNote(note, context) {
     addAction({
-        action_id: "add_note",
-        note
+        type: "add_note",
+        note: note
     });
 }
