@@ -7,9 +7,6 @@ require: js/getters.js
 # Подключение сценарных файлов
 require: main.sc
 
-patterns:
-    $AnyText = $regexp<.*>
-    
     
 theme: /
     state: Start
@@ -20,7 +17,9 @@ theme: /
         a: Начнём.
     
     state: ДобавлениеЭлемента
-        q!: (~добавить|~записать|~поставить|~установить) [~напоминание|~заметка|~задание|~задача] $AnyText::anyText
+        q!: (~добавить|~записать|~поставить|~установить) 
+            [~напоминание|~заметка|~задание|~задача] 
+            $nonEmptyGarbage::anyText
         a: {{ $parseTree._anyText }}
 
     state: Fallback
