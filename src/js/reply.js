@@ -4,6 +4,7 @@ function reply(body, response){
         body: body
     };
     response.replies = response.replies || [];
+    log(reply)
     response.replies.push(reply);
 }
 
@@ -54,6 +55,6 @@ function addSuggestions(suggestions, context) {
         }
     }
 
-    reply({suggestions: {buttons: buttons}}, context);
+    reply({"suggestions": {"buttons": buttons}}, context);
     log(context.response.replies);
 }
