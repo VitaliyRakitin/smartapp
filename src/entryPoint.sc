@@ -7,7 +7,7 @@ require: js/getters.js
 # Подключение сценарных файлов
 require: main.sc
 
-pattern:
+patterns:
     $AnyText = $regexp<.*>
     
     
