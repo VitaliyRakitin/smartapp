@@ -18,6 +18,17 @@
     "shared" : false,
     "phrases" : [ {
       "text" : "пока"
+    }, {
+      "text" : "прощай "
+    }, {
+      "text" : "хочу @Ингредиент"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "ing",
+      "entity" : "Ингредиент",
+      "required" : false,
+      "prompts" : [ ]
     } ]
   }, {
     "id" : 39072,
@@ -26,8 +37,37 @@
     "shared" : false,
     "phrases" : [ {
       "text" : "привет"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "ing",
+      "entity" : "Ингредиент",
+      "required" : true,
+      "prompts" : [ ]
     } ]
   } ],
-  "entities" : [ ],
+  "entities" : [ {
+    "entity" : {
+      "id" : 21591,
+      "name" : "Ингредиент",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false
+    },
+    "records" : [ {
+      "id" : 534303,
+      "type" : "synonyms",
+      "rule" : [ "картошка", "картоха" ],
+      "value" : "{\"id\":\"картоха\"}"
+    }, {
+      "id" : 534346,
+      "type" : "pattern",
+      "rule" : [ ],
+      "value" : ""
+    } ]
+  } ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
 }
