@@ -41,6 +41,7 @@ function addSuggestions(suggestions, context) {
             }
         );
     });
+    log(buttons;)
 
     if (context.response.replies &&
         context.response.replies.length &&
