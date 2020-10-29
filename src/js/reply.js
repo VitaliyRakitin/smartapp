@@ -48,6 +48,7 @@ function addSuggestions(suggestions, context) {
         if (context.response.replies[index].type === "raw" &&
             context.response.replies[index].body)
         ) {
+            log("IN")
             context.response.replies[index].body.items.push({command: command});
             return;
         }
