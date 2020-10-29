@@ -8,6 +8,8 @@ function reply(body, response){
 
     response.replies = response.replies || [];
     response.replies.push(reply_data);
+    log(response.replies);
+
 }
 
 
