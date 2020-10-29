@@ -49,7 +49,7 @@ function addSuggestions(suggestions, context) {
             context.response.replies[index].body
         ) {
             log("IN")
-            context.response.replies[index].body.items.push({command: command});
+            context.response.replies[index].body.suggestions = {buttons: buttons};
             return;
         }
     }
