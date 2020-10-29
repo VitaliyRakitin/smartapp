@@ -47,9 +47,11 @@ function addSuggestions(suggestions, context) {
         context.response.replies.length &&
         context.response.replies[0].body
     ) {
+        log("IN");
         context.response.replies[0].body.suggestions = {buttons: buttons};
         return;
     }
     
+        log("reply")
     reply({suggestions: {buttons: buttons}}, context);
 }
