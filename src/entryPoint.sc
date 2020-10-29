@@ -7,7 +7,9 @@ require: js/getters.js
 # Подключение сценарных файлов
 require: main.sc
 
-    
+patterns:
+    $AnyText: $nonEmptyGarbage
+
 theme: /
     state: Start
         # При запуске приложения с кнопки прилетит сообщение /start.
@@ -17,7 +19,7 @@ theme: /
         a: Начнём.
     
     state: ДобавлениеЭлемента
-        q!: (~добавить|~записать|~поставить|~установить) [~напоминание|~заметка|~задание|~задача] $nonEmptyGarbage::anyText
+        q!: (~добавить|~записать|~поставить|~установить) [~напоминание|~заметка|~задание|~задача] $AnyText::anyText
         a: {{ $parseTree._anyText }}
 
     state: Fallback
