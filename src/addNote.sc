@@ -6,4 +6,4 @@ theme: /
             $AnyText::anyText
 
         script:
-            addNote(anyText);
+            addNote($parseTree._anyText);
