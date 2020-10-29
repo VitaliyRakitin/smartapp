@@ -20,7 +20,7 @@ theme: /
         a: Начнём.
     
     state: ДобавлениеЭлемента
-        q!: (добавь) $AnyText::anyText
+        q!: (~добавить|~записать|~поставить|~установить) [~напоминание|~заметка|~задание|~задача] $AnyText::anyText
         a: {{ $parseTree._anyText }}
 
     state: Fallback
