@@ -21,7 +21,7 @@ theme: /
     
     state: ДобавлениеЭлемента
         q!: (добавь) $AnyText::anyText
-        a: {{ JSON.stringify($parseTree.anyText) }}
+        a: {{ $parseTree._anyText }}
 
     state: Fallback
         event!: noMatch
