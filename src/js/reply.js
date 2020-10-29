@@ -19,7 +19,7 @@ function addAction(action, context){
         context.response.replies[0].body &&
         context.response.replies[0].body.items
     ) {
-        context.response.replies.body.items.push({command: command});
+        context.response.replies[0].body.items.push({command: command});
         return;
     };
     
