@@ -21,5 +21,5 @@ function addAction(action, context){
         ]
     }; 
 
-    return reply(context.response);
+    return reply(body, context.response);
 }
