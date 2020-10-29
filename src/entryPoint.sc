@@ -3,6 +3,7 @@ require: slotfilling/slotFilling.sc
   
 # Подключение javascript обработчиков
 require: js/getters.js
+require: js/actions.js
 
 # Подключение сценарных файлов
 require: main.sc
@@ -22,7 +23,8 @@ theme: /
         q!: (~добавить|~установить|запиши|поставь|закинь) 
             [~напоминание|~заметка|~задание|~задача]
             $AnyText::anyText
-        a: {{ $parseTree._anyText }}
+        script:
+            addNote(anyText);
 
     state: Fallback
         event!: noMatch
