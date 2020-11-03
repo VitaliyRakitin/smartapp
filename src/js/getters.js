@@ -38,4 +38,3 @@ if (request &&
     }
     return null;
 }
-}
