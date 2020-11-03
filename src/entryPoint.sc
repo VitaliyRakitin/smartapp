@@ -26,5 +26,5 @@ theme: /
 
     state: Fallback
         event!: noMatch
-        a: Я не понимаю. Вы сказали: {{JSON.stringify(get_item_selector($request))}}
+        a: Я не понимаю. Вы сказали: {{JSON.stringify(get_item_selector(get_request($context)))}}
 
