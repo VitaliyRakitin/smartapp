@@ -28,5 +28,5 @@ theme: /
         event!: noMatch
         script:
             log($request);
-        a: Я не понял. Вы сказали: {{$request.query}}
+        a: Я не понимаю. Вы сказали: {{$request.query}}
 
