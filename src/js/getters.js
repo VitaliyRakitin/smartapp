@@ -36,5 +36,5 @@ if (request &&
         request.payload.meta.current_app.state){
         return request.payload.meta.current_app.state.item_selector;
     }
-    return null;
+    return "OK";
 }
