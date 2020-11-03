@@ -1,7 +1,9 @@
 theme: /
 
     state: ВыполнениеЭлемента
-        q!: $AnyText::anyText (выполнено)
+    q!: (~сделать|~выполнить)
+    $AnyText::anyText
+
             
         a: Молодец
         
