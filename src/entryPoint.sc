@@ -26,6 +26,5 @@ theme: /
 
     state: Fallback
         event!: noMatch
-        script:
         a: Я не понимаю. Вы сказали: {{get_item_selector($request)}}
 
