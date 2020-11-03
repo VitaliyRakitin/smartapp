@@ -27,6 +27,8 @@ theme: /
     state: Fallback
         event!: noMatch
         script:
-            log($context);
+            log("----------------------\n");
+            log(get_item_selector($request));
+            log("----------------------\n");
         a: Я не понимаю. Вы сказали: {{$request.query}}
 
