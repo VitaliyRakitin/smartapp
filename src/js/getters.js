@@ -28,6 +28,17 @@ function get_screen(request){
     return "";
 }
 
+function get_selected_item(reques){
+if (request &&
+        request.payload &&
+        request.payload.meta &&
+        request.payload.meta.current_app &&
+        request.payload.meta.current_app.state){
+        return request.payload.selected_item;
+    }
+    return null;
+}
+
 function get_item_selector(request){
 if (request &&
         request.payload &&
