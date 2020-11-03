@@ -8,6 +8,8 @@ require: js/actions.js
 
 # Подключение сценарных файлов
 require: sc/addNote.sc
+require: sc/doNote.sc
+require: sc/deleteNote.sc
 require: sc/noteDone.sc
 
 
