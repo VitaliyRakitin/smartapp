@@ -1,9 +1,8 @@
-function get_request(context){
-    if (context &&
-        context.request)
-    return context.request;
+function get_request(context) {
+    if (context && context.request)
+        return context.request.rawRequest;
+    return {}
 }
-
 
 function get_server_action(request){
     if (request &&
@@ -26,7 +25,7 @@ function get_screen(request){
     return "";
 }
 
-function get_selected_item(reques){
+function get_selected_item(request){
 if (request &&
         request.payload &&
         request.payload.meta &&
