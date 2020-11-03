@@ -1,9 +1,7 @@
 function get_request(context){
     if (context &&
-        context.request &&
-        context.request.rawRequest &&
-        context.request.rawRequest)
-    return context.request.rawRequest;
+        context.request)
+    return context.request;
 }
 
 
