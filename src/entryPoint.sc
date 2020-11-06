@@ -15,7 +15,7 @@ require: sc/noteDone.sc
 
 patterns:
     $AnyText = $nonEmptyGarbage
-    $AnyDigit = $regexp<[\d]>
+    $AnyDigit = $regexp<[\d][\d]>
 
 theme: /
     state: Start
