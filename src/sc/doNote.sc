@@ -3,6 +3,7 @@ theme: /
     state: ВыполнениеЭлементаПоНомеру
         q!: [я] (выполнил|сделал)
             $AnyDigit: digit
+            $weight<1>
         
         a: Оки {{$parseTree._digit}}
 
