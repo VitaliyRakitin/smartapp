@@ -17,7 +17,7 @@
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "Я сделал @duckling.number"
+      "text" : "Я сделал номер @duckling.number"
     } ],
     "patterns" : [ ],
     "slots" : [ {
