@@ -8,6 +8,10 @@ theme: /
         script:
             var item_id = get_id_by_selected_item_number($parseTree._digit)
             doneNote(item_id,$context);
+            
+        random:
+            a: Молодец!
+            a: Супер!
 
     state: ВыполнениеЭлемента
         q!: [я] (выполнил|сделал)
@@ -18,3 +22,6 @@ theme: /
             var item_id = get_id_by_selected_item(get_request($context));
             doneNote(item_id,$context);
     
+        random:
+            a: Молодец!
+            a: Супер!
