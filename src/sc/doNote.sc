@@ -5,7 +5,9 @@ theme: /
             $AnyDigit:: digit
             $weight<1.001>
         
-        a: Оки {{$parseTree._digit}}
+        script:
+            var item_id = get_id_by_selected_item($parseTree._digit)
+            doneNote(item_id,$context);
 
     state: ВыполнениеЭлемента
         q!: [я] (выполнил|сделал)
