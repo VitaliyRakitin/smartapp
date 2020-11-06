@@ -1,7 +1,8 @@
 theme: /
 
     state: ВыполнениеЭлементаПоНомеру
-        q!: $AnyDigit: digit
+        q!: [я] (выполнил|сделал)
+            $AnyDigit: digit
         
         a: Оки {{$parseTree._digit}}
 
