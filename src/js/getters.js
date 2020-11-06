@@ -57,7 +57,7 @@ function get_id_by_selected_item(request){
     return null;
 }
 
-function get_id_by_selected_item_number(number){
+function get_id_by_selected_item_number(number, request){
     var items = get_items(request);
     if (items && items.length && number) {
         for (var item in items) {
