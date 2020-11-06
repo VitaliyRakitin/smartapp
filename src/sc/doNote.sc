@@ -1,10 +1,9 @@
 theme: /
 
     state: ВыполнениеЭлементаПоНомеру
-    
-        intent!: /doNote $weight<1>
+        q!: $AnyDigit: digit
         
-        a: Молодец {{ $parseTree._number}}
+        a: Оки {{$parseTree._digit}}
 
     state: ВыполнениеЭлемента
         q!: [я] (выполнил|сделал)
