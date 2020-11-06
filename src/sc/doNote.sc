@@ -14,7 +14,6 @@ theme: /
         
     state: ВыполнениеЭлементаПоНомеру
     
-        q: [я] (выполнил|сделал) номер $Number::value
+        intent!: /doNote
         
-        
-        a: Молодец {{ $parseTree._value}}
+        a: Молодец {{ $parseTree._number}}
