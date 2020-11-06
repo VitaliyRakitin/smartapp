@@ -2,7 +2,7 @@ theme: /
 
     state: ВыполнениеЭлементаПоНомеру
     
-        intent!: /doNote
+        intent!: /doNote $weight<1>
         
         a: Молодец {{ $parseTree._number}}
 
