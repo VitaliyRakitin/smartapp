@@ -1,6 +1,7 @@
 theme: /
 
     state: ВыполнениеЭлемента
+        intent!: /doNote
         q!: [я] (выполнил|сделал)
             $AnyText::anyText
             
