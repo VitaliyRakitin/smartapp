@@ -7,4 +7,4 @@ theme: /
         script:
             var tmp = $parseTree._number;
 
-        a: {{$parseTree._number}}
+        a: Успех: {{$parseTree._number}}
