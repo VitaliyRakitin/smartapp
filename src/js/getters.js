@@ -56,3 +56,14 @@ function get_id_by_selected_item(request){
     }
     return null;
 }
+
+get_id_by_selected_item_number(number){
+    var items = get_items(request);
+    if (items && items.length && number) {
+        for (var item in items) {
+            if (item.number == number) return item.id;
+        }
+    }
+    
+    return null;
+}

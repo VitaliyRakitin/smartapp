@@ -6,7 +6,7 @@ theme: /
             $weight<1.001>
         
         script:
-            var item_id = get_id_by_selected_item($parseTree._digit)
+            var item_id = get_id_by_selected_item_number($parseTree._digit)
             doneNote(item_id,$context);
 
     state: ВыполнениеЭлемента
