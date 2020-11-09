@@ -2,7 +2,7 @@ theme: /
 
     state: ВыполнениеЭлементаПоНомеру
         q!: [я] (выполнил|сделал) номер
-            $AnyDigit:: digit
+            @duckling.number:: digit
             $weight<1.001>
         
         script:

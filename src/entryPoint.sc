@@ -16,8 +16,6 @@ require: sc/noteDone.sc
 patterns:
     $AnyText = $nonEmptyGarbage
     
-    $AnyDigit = $regexp<^\d+$>
-
 theme: /
     state: Start
         # При запуске приложения с кнопки прилетит сообщение /start.
