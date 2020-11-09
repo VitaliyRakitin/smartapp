@@ -11,22 +11,7 @@
     "timezone" : "UTC",
     "shared" : false
   },
-  "intents" : [ {
-    "id" : 50550,
-    "path" : "/doNote",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "Я сделал номер @duckling.number"
-    } ],
-    "patterns" : [ ],
-    "slots" : [ {
-      "name" : "number",
-      "entity" : "duckling.number",
-      "required" : false,
-      "prompts" : [ ]
-    } ]
-  } ],
+  "intents" : [ ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
 }

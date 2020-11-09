@@ -6,8 +6,8 @@ theme: /
             $weight<1.001>
         
         script:
-            //var item_id = get_id_by_selected_item_number($parseTree._digit,get_request($context))
-            //doneNote(item_id,$context);
+            var item_id = get_id_by_selected_item_number($parseTree._digit,get_request($context))
+            doneNote(item_id,$context);
             
         random:
             a: Молодец!
