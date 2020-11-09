@@ -59,11 +59,10 @@ function get_id_by_selected_item(request){
 
 function get_id_by_selected_item_number(number, request){
     var items = get_items(request);
-    if (items && items.length && number) {
+    if (items && items.length) {
         for (var item in items) {
             if (item.number == number) return item.id;
         }
     }
-    
     return null;
 }
