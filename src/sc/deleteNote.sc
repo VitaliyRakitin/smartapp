@@ -1,7 +1,7 @@
 theme: /
     state: УдалениеЭлементаПоНомеру
         q!: (~удалить|удали) номер
-            $AnyDigit:: digit
+            @duckling.number:: digit
             $weight<1.001>
         
         script:
