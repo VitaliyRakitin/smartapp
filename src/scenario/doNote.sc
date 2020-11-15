@@ -12,9 +12,7 @@ theme: /
             );
             doneNote(itemId, $context);
             
-        random:
-            a: Молодец!
-            a: Супер!
+        go!: /ЗаданиеВыполнено
 
 
     state: ВыполнениеЭлемента
@@ -26,6 +24,4 @@ theme: /
             var itemId = findItemIdBySelectedItem(getRequest($context));
             doneNote(itemId, $context);
     
-        random:
-            a: Молодец!
-            a: Супер!
+        go!: /ЗаданиеВыполнено

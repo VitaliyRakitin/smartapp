@@ -12,7 +12,8 @@ theme: /
             )
             deleteNote(itemId, $context);
 
-        a: Удаляю
+        buttons:
+            "Добавь запись выбросить мусор"
 
 
     state: УдалениеЭлемента
@@ -27,4 +28,5 @@ theme: /
                 $context
             );
         
-        a: Удаляю
+        buttons:
+            "Добавь запись выбросить мусор"
