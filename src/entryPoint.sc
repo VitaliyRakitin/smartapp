@@ -29,7 +29,7 @@ theme: /
         q!: [$repeat<$OpenSkipWords>] 
             $repeat<$OpenKeyWords>
             [$repeat<$OpenSkipWords>] 
-            $context.injector.projectName
+            $injector.projectName
         a: Начнём.
 
     state: Fallback
