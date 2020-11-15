@@ -8,10 +8,10 @@ require: js/actions.js
 require: js/findItem.js
 
 # Подключение сценарных файлов
-require: sc/addNote.sc
-require: sc/doNote.sc
-require: sc/deleteNote.sc
-require: sc/noteDone.sc
+require: scenario/addNote.sc
+require: scenario/doNote.sc
+require: scenario/deleteNote.sc
+require: scenario/noteDone.sc
 
 
 patterns:
