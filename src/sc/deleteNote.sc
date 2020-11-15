@@ -5,8 +5,11 @@ theme: /
             $weight<1.001>
         
         script:
-            var item_id = get_id_by_selected_item_number($parseTree._digit,get_request($context))
-            deleteNote(item_id,$context);
+            var itemId = findItemIdByNumber(
+                $parseTree._digit,
+                getRequest($context)
+            )
+            deleteNote(itemId, $context);
 
         a: Удаляю
 
@@ -17,7 +20,9 @@ theme: /
             
         
         script:
-            var item_id = get_id_by_selected_item(get_request($context));
-            deleteNote(item_id,$context);
+            deleteNote(
+                findItemIdBySelectedItem(getRequest($context)),
+                $context
+            );
         
         a: Удаляю

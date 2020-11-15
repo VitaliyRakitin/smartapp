@@ -6,7 +6,7 @@ theme: /
             $weight<1.001>
         
         script:
-            var item_id = get_id_by_selected_item_number($parseTree._digit,get_request($context))
+            var item_id = findItemIdByNumber($parseTree._digit,getRequest($context))
             doneNote(item_id,$context);
             
         random:
@@ -19,7 +19,7 @@ theme: /
             $weight<-0.8>
             
         script:
-            var item_id = get_id_by_selected_item(get_request($context));
+            var item_id = findItemIdBySelectedItem(getRequest($context));
             doneNote(item_id,$context);
     
         random:

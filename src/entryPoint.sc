@@ -5,6 +5,7 @@ require: slotfilling/slotFilling.sc
 require: js/getters.js
 require: js/reply.js
 require: js/actions.js
+require: js/findItem.js
 
 # Подключение сценарных файлов
 require: sc/addNote.sc

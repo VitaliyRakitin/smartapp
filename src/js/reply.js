@@ -1,4 +1,4 @@
-function reply(body, response){
+function reply(body, response) {
     var replyData = {
         type: "raw",
         body: body
@@ -8,7 +8,7 @@ function reply(body, response){
 }
 
 
-function addAction(action, context){
+function addAction(action, context) {
     var command = {
         type: "smart_app_data",
         action: action
@@ -30,7 +30,7 @@ function addAction(action, context){
 function addSuggestions(suggestions, context) {
     var buttons = [];
     
-    suggestions.forEach (function(suggest) {
+    suggestions.forEach(function(suggest) {
         buttons.push(
             {
                 action: {
@@ -42,15 +42,5 @@ function addSuggestions(suggestions, context) {
         );
     });
     
-    // for (var index = 0; context.response.replies && index < context.response.replies.length; index ++) {
-    //     if (context.response.replies[index].type === "raw" &&
-    //         context.response.replies[index].body
-    //     ) {
-    //         log("IN")
-    //         context.response.replies[index].body.suggestions = {buttons: buttons};
-    //         return;
-    //     }
-    // }
-
     reply({"suggestions": {"buttons": buttons}}, context.response);
 }
