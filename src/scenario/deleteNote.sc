@@ -1,4 +1,5 @@
 theme: /
+
     state: УдалениеЭлементаПоНомеру
         q!: (~удалить|удали) номер
             @duckling.number:: digit
@@ -12,6 +13,7 @@ theme: /
             deleteNote(itemId, $context);
 
         a: Удаляю
+
 
     state: УдалениеЭлемента
         q!: (~удалить|удали)
