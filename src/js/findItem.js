@@ -1,7 +1,7 @@
 function findItemIdBySelectedItem(request) {
     var items = getItems(request);
     var selectedItem = getSelectedItem(request);
-    if (selectedItem && items && items.length > selected_item.index) {
+    if (selectedItem && items && items.length > selectedItem.index) {
         return items[selectedItem.index].id;
     }
     return null;
