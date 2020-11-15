@@ -10,5 +10,13 @@ theme: /
         random: 
             a: Молодец!
             a: Красавичк!
-            a: Супер!
-    
+            a: Супер
+            
+    state: ДобавленаНоваяЗапись
+        event!: note_added
+        event!: NOTE_ADDED
+
+        random: 
+            a: Добавлено!
+            a: Сохранено!
+
