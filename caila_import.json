@@ -11,7 +11,14 @@
     "timezone" : "UTC",
     "shared" : false
   },
-  "intents" : [ ],
+  "intents" : [ {
+    "id" : 53044,
+    "path" : "/ЗапускПриложения",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "patterns" : [ ]
+  } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
 }
