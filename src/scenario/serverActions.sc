@@ -8,14 +8,15 @@ theme: /
     state: ЗаданиеВыполнено
         event!: done
         event!: DONE
-        
-        script:
-            addSuggestions(["Добавь задачу купить машину"], $context);
-            
+
         random: 
             a: Молодец!
             a: Красавичк!
             a: Супер
+
+        buttons:
+            "Запиши купить молоко"
+            "Добавь запись помыть машину" 
 
            
     state: ДобавленаНоваяЗапись
