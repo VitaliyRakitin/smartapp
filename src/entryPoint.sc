@@ -20,6 +20,7 @@ patterns:
     $OpenKeyWords = (включи|включить|включай|запусти|запустить|запускай|играть|
         поиграть|поиграем|навык|игра|игру|скил|скилл|приложение|апп|сыграем|
         открой|поиграй со мной|сыграть|давай играть|активируй|давай|поиграем)
+    $projectName = (Название вашего навыка)
 
 theme: /
     state: Start
@@ -29,7 +30,7 @@ theme: /
         q!: [$repeat<$OpenSkipWords>] 
             $repeat<$OpenKeyWords>
             [$repeat<$OpenSkipWords>] 
-            $injector.projectName
+            $projectName
         a: Начнём.
 
     state: Fallback
