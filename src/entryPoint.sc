@@ -26,7 +26,10 @@ theme: /
         # При запуске приложения с кнопки прилетит сообщение /start.
         q!: $regex</start>
         # При запуске приложения с голоса прилетит сказанная фраза.
-        q!: [$repeat<$OpenSkipWords>] $repeat<$OpenKeyWords> [$repeat<$OpenSkipWords>] (название навыка)
+        q!: [$repeat<$OpenSkipWords>] 
+            $repeat<$OpenKeyWords>
+            [$repeat<$OpenSkipWords>] 
+            $context.injector.projectName
         a: Начнём.
 
     state: Fallback

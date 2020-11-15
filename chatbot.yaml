@@ -14,3 +14,6 @@ caila:
 tests:
   include:
     - test.xml
+
+injector:
+    projectName: "Название навыка"
