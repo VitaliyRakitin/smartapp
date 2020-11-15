@@ -1,8 +1,8 @@
 function findItemIdBySelectedItem(request) {
     var items = getItems(request);
-    var selected_item = getSelectedItem(request);
-    if (selected_item && items && items.length > selected_item.index) {
-        return items[selected_item.index].id;
+    var selectedItem = getSelectedItem(request);
+    if (selectedItem && items && items.length > selected_item.index) {
+        return items[selectedItem.index].id;
     }
     return null;
 }
