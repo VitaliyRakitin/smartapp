@@ -11,7 +11,7 @@ require: js/findItem.js
 require: scenario/addNote.sc
 require: scenario/doNote.sc
 require: scenario/deleteNote.sc
-require: scenario/noteDone.sc
+require: scenario/serverActions.sc
 
 
 patterns:
