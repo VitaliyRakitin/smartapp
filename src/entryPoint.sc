@@ -16,7 +16,7 @@ require: scenario/noteDone.sc
 
 patterns:
     $AnyText = $nonEmptyGarbage
-    $OpenSkipWords = [хочу|мне|мое|моё|пожалуйста|в|прошу|тебя|может|с]
+    $OpenSkipWords = (хочу|мне|мое|моё|пожалуйста|в|прошу|тебя|может|с)
     $OpenKeyWords = (включи|включить|включай|запусти|запустить|запускай|играть|
         поиграть|поиграем|навык|игра|игру|скил|скилл|приложение|апп|сыграем|
         открой|поиграй со мной|сыграть|давай играть|активируй|давай|поиграем)
@@ -26,7 +26,7 @@ theme: /
         # При запуске приложения с кнопки прилетит сообщение /start.
         q!: $regex</start>
         # При запуске приложения с голоса прилетит сказанная фраза.
-        q!: $repeat<$OpenSkipWords> $repeat<$OpenKeyWords> $repeat<$OpenSkipWords> (название навыка)
+        q!: [$repeat<$OpenSkipWords>] $repeat<$OpenKeyWords> [$repeat<$OpenSkipWords>] (название навыка)
         a: Начнём.
 
     state: Fallback
